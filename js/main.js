@@ -139,7 +139,7 @@ const createBarChart = (data, colors) => {
     
 
     // 1.5. Filter and sorting the new data
-    /*newData = data.filter(data => data.year == year);
+    newData = data.filter(data => data.year == year);
 
     if (sort == 'alphabet') {
       newData = newData.sort((a, b) => d3.ascending(a.country, b.country));
@@ -149,17 +149,17 @@ const createBarChart = (data, colors) => {
     }
     else {
       newData = newData.sort((a, b) => d3.descending(a.value, b.value));
-    }*/
+    }
 
     // 1.6 Define new x and y scales
-    /*const xScale = d3.scaleBand()
+    const xScale = d3.scaleBand()
         .domain(newData.map(d => d.country))
         .range([margins.left, width - margins.right])
         .padding(0.2);
 
     const yScale = d3.scaleLinear()
       .domain([0, d3.max(newData, d => d.value)])
-      .range([height - margins.bottom, margins.top]);*/
+      .range([height - margins.bottom, margins.top]);
 
     // 1.7. Define a transition.
     
@@ -168,7 +168,7 @@ const createBarChart = (data, colors) => {
     
       
     // 1.9 Transition on the x and y axes
-    /*const xAxis = d3.axisBottom(xScale)
+    const xAxis = d3.axisBottom(xScale)
     const yAxis = d3.axisLeft(yScale)
 
     xGroup.transition(t)
@@ -184,7 +184,7 @@ const createBarChart = (data, colors) => {
     yGroup.transition(t)
         .call(yAxis)
       .selection()
-        .call(g => g.select(".domain").remove());*/
+        .call(g => g.select(".domain").remove());
   }
 }
 
