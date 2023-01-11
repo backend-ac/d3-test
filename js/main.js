@@ -164,7 +164,7 @@ const createBarChart = (data, colors) => {
       .domain([0, d3.max(newData, d => d.value)])
       .range([height - margins.bottom, margins.top]);
 
-    bar.data(newData);
+    svg.data(newData);
 
     // 1.7. Define a transition.
     
