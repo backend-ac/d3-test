@@ -188,9 +188,6 @@ const createBarChart = (data, colors) => {
         .call(yAxis)
       .selection()
         .call(g => g.select(".domain").remove());
-
-    createBarChart(newData, colors);
-    createLineChart(newData, colors);
   }
 }
 
