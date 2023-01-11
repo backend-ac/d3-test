@@ -1,5 +1,6 @@
 // Set the time format
 const parseTime = d3.timeParse("%Y");
+let sort = '';
 
 // Load the dataset and formatting variables
 d3.csv("./data/data.csv", d => {
@@ -130,9 +131,7 @@ const createBarChart = (data, colors) => {
   d3.select("#sort").on("change", function(e) {
     // Get the sorting option selected
 
-    console.log(e)
-    console.log(e.target)
-    console.log(e.target.value)
+    sort = e.target.value;
     // Updte the chart
     update();
   });
