@@ -139,7 +139,7 @@ const createBarChart = (data, colors) => {
     
 
     // 1.5. Filter and sorting the new data
-    newData = data.filter(data => data.year == year);
+    newData = data.filter(data => data.year == 2020);
 
     if (sort == 'alphabet') {
       newData = newData.sort((a, b) => d3.ascending(a.country, b.country));
