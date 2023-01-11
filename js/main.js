@@ -164,8 +164,6 @@ const createBarChart = (data, colors) => {
       .domain([0, d3.max(newData, d => d.value)])
       .range([height - margins.bottom, margins.top]);
 
-    svg.data(newData);
-
     // 1.7. Define a transition.
     
     
@@ -190,6 +188,9 @@ const createBarChart = (data, colors) => {
         .call(yAxis)
       .selection()
         .call(g => g.select(".domain").remove());
+
+    createBarChart(newData, colors);
+    createLineChart(newData, colors);
   }
 }
 
