@@ -171,7 +171,7 @@ const createBarChart = (data, colors) => {
     const xAxis = d3.axisBottom(xScale)
     const yAxis = d3.axisLeft(yScale)
 
-    xGroup.transition(t)
+    xGroup.transition(300)
       .call(xAxis)
       .call(g => g.selectAll(".tick"));
 
@@ -181,7 +181,7 @@ const createBarChart = (data, colors) => {
       .attr("dy", ".15em")
       .attr("transform", "rotate(-65)");
 
-    yGroup.transition(t)
+    yGroup.transition(300)
         .call(yAxis)
       .selection()
         .call(g => g.select(".domain").remove());
